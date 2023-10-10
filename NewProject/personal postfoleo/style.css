@@ -1,0 +1,265 @@
+ @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Poppins&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Poppins&family=Source+Code+Pro:ital,wght@1,200&display=swap');
+
+
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ .container {
+     display: flex;
+ }
+
+ .sidebar {
+     /* background-color: red; */
+     /* width: 11vw; */
+     transition: 2s ease;
+     height: 100vh;
+     font-family: 'Fira Sans', sans-serif;
+     font-family: 'Poppins', sans-serif;
+     position: absolute;
+ }
+
+ .main {
+     /* background-color: yellow; */
+     width: 90vw;
+ }
+
+ .sidebar nav {
+    /* padding: 14px; */
+    height: 100vh;
+    background-color: rgb(149, 148, 148);
+    
+ }
+
+ .sidebar nav li {
+     list-style: none;
+     font-size: 30px;
+     padding: 30px;
+    
+     
+ }
+
+ .info {
+     /* background-color: rgb(0, 255, 30); */
+     margin: auto;
+     margin-top: 76px;
+     height: 50vh;
+     width: 80vw;
+     display: flex;
+     justify-content: space-around;
+    
+ }
+
+ .info img {
+    height: 50vh;
+}
+.devInfo{
+    display: flex;
+   justify-content: center;
+    flex-direction: column;
+    font-family: 'Fira Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Source Code Pro', monospace;
+}
+   
+.hellow{
+    font-size: 65px;
+}
+.name{
+    font-size: 50px;
+    font-weight: 100;
+    font-family: 'Fira Sans', sans-serif;
+     font-family: 'Poppins', sans-serif;
+}
+.about{
+    font-size: 35px;
+}
+.buttons button{
+  padding: 9px 24px;
+  border-radius: 22px;
+  cursor: pointer;
+  background-color: dodgerblue;
+  font-weight: bold;
+  font: 21px;
+  margin: 0 3px;
+  color: white;
+
+}
+ .buttons :hover{
+     background: white;
+     color: black;
+}
+li a{
+    text-decoration: none;
+   color: black;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+#contact_form{
+    padding-top: 256px;
+    padding-left: 40px;
+}
+.contact-container{
+    margin-top: 30px;
+    font-weight: bold;
+    display: flex;
+   flex-direction: column;
+}
+
+.contact-para{
+    font-size: 1.74rem;
+}
+.Email{
+    padding: 10px 0;
+    
+}
+.phone{
+    padding: 10px 0;
+}
+.form-control {
+    width: 13vw;
+    height: 4vh;
+    border-radius: 7px;
+    box-shadow: 6px -3px #44454d;
+
+}
+#txt{
+    max-width: 35vw;
+     max-height: 10vh;
+     min-width: 25vw;
+     min-height: 6vh;
+}
+
+/* about css */
+.about-head{
+    height: 50px;
+    width: 315px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #6b6977;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+
+}
+.bigBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.smallBox1{
+    /* border: 2px solid red; */
+  text-align: center;
+    height: 90vh;
+    width: 600px;
+    padding: 140px;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    
+}
+.smallBox2{
+    /* border: 2px solid red; */
+    height: 90vh;
+    width: 600px;
+    margin-left: 100px;
+    /* text-align: center; */
+   
+  
+}
+.about-heading{
+ display: block;
+ padding: 10px;
+}
+li{
+    margin-top: 10px;
+}
+.pro{
+    width: 300px;
+    height: 19px;
+}
+
+.img{
+    height: 200px;
+    width: 200px;
+    border: 2px solid rgb(237, 174, 0);
+    margin: 200px;
+    box-shadow: 10px -3px rgb(237, 174, 0);
+    overflow: hidden;
+    border-radius: 50px;
+}
+.img img{
+    height: 200px;
+    width: 200px;
+     
+}
+
+.projects{
+    height: 75vh;
+    width: 100%;
+    /* border: 2px  solid red; */
+    padding-top:20px ;
+    margin-top: 20px;
+}
+.content{
+    width: 75vw;
+    height: 100px;
+    /* border: 1px solid green; */
+    padding-left:20px ;
+    padding-top: 10px;
+    font-family: 'Fira Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: bold;
+    /* font-size: 30px; */
+}
+
+.sidebarGo{
+    transform: translate(-190px,0px);
+    position: absolute;
+    
+}
+@media (max-width:900px) {
+    /* *{
+
+        background-color: red;
+    } */
+    .info img{
+        display: none;
+    }
+    /* .sidebar{
+        transform: translate(-190px,0px);
+        position: absolute;
+    } */
+}
+/* haamburger */
+
+.hamburger{
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.ham{
+    height: 48px;
+    width: 40px;
+    transition: 2s ease;
+}
+.cross{
+    height: 48px;
+    width: 40px;
+    margin-left: 95px;
+    transition: 2s ease;
+}
+
+
