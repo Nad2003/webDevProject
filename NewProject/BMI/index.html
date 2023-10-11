@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: grid;
+      width: 30vw;
+      height: 50vh;
+      margin-top: 30px;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 6px 6px 20px black;
+      background-color: rgb(209, 223, 229);
+      border-radius: 10px;
+      /* overflow: hidden; */
+     
+    }
+
+   .input {
+      height: 25px;
+      width: 30vwpx;
+      border-radius: 10px;
+      box-shadow: 5px 2px 10px black;
+
+    }
+
+    .output {
+      height: 70px;
+      /* width: 100vw; */
+      text-align: center;
+     
+    }
+    .checker{
+      height: 5px;
+    width: 75px;
+      /* border: 1px solid red; */
+      align-items: center;
+      margin-bottom: 30px;
+    }
+    #btn{
+      width: 100px;
+      height: 30px;
+      border-radius: 10px;
+      font-size: 1.2525rem;
+      background-color: rgb(45, 136, 227);
+      color: white;
+    }
+    #btn:hover{
+      background-color: rgba(234, 232, 232, 0.923);
+      color: rgb(48, 45, 227);
+    }
+    #f{
+      background-color: rgb(74, 170, 243);
+      width: 100px;
+     font-family:'Times New Roman', Times, serif;
+     text-align: center;
+    color:rgb(74, 170, 243) ;
+    }
+    #s{
+      background-color: rgb(57, 190, 115);
+      width: 100px;
+      font-family:'Times New Roman', Times, serif;
+      text-align: center;
+      color:  rgb(57, 190, 115);
+    }
+    #t{
+background-color: rgb(205, 102, 74);
+width: 100px;
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
+color:  rgb(205, 102, 74);
+    }
+    .bar{
+      display: flex;
+    }
+    .head{
+      text-align: center;
+    }
+    .head h2{
+      background-color: rgba(114, 107, 107, 0.63);
+    }
+    @media (max-width:900px) {
+  body{
+    background-color: rgb(209, 223, 229);
+  }
+    .container{
+      background-color: rgb(209, 223, 229);
+      box-shadow: none;
+    }
+   
+}
+  </style>
+</head>
+
+<body>
+  <div class="container">
+   <div class="head"><h2>BMI Calculator</h2></div>
+    <input type="number" id="inputText" class="input" placeholder="Height">
+    <br>
+    <input type="number" id="inputwaight" class="input" placeholder="Weight In KG">
+    <ul>
+      <input type="radio" id="input1" name=" "><span><strong>Feet</strong></span>
+    </ul>
+    <ul><input type="radio" id="input2" name=" "><span><strong>Centemeter</strong></span></ul>
+    <button id="btn"> Go</button>
+    <div class="output" id="output"></div>
+  <div class="bar"><nav class="checker" id="f">Under Weight</nav> <nav class="checker" id="s">Normal</nav><nav class="checker" id="t">OverWeight</nav></div>
+  </div>
+
+
+</body>
+<script>
+  const height = document.getElementById('inputText');
+  const weight= document.getElementById('inputwaight');
+  document.getElementById('input1').addEventListener('click', () => {
+      if(height.value>0){
+        let val = height.value;
+    val = val * 30.48;
+    let v=val*val;
+    let BMI=(weight.value/v)*10000;
+   let bmi= BMI.toFixed(2);
+    document.getElementById('btn').addEventListener('click', () => {
+      const output= document.getElementById('output');
+      output.textContent=bmi+' BMI';
+      document.getElementById('output').style.fontSize='2rem';
+      if(bmi<19&&bmi>16){
+      document.getElementById('output').style.color='rgb(74, 170, 243)';
+      }else if (bmi<25&&bmi>19) {
+        document.getElementById('output').style.color='rgb(57, 190, 115)';
+      } else {
+        document.getElementById('output').style.color=' rgb(205, 102, 74)';
+      }
+    //  console.log(bmi);
+    })
+      }else{
+        alert("Enter Valid Height");
+      }
+  
+    height.val = 0;
+  });
+
+  document.getElementById('input2').addEventListener('click', () => {
+  if(height.value>0){
+    let val = height.value;
+    val = val * 1;
+    let v=val*val;
+    let BMI=(weight.value/v)*10000;
+    let bmi=BMI.toFixed(2);
+    document.getElementById('btn').addEventListener('click', () => {
+     const output= document.getElementById('output');
+     output.textContent=bmi+' BMI';
+      document.getElementById('output').style.fontSize='2rem';
+      if(bmi<19&&bmi>16){
+      document.getElementById('output').style.color='rgb(74, 170, 243)';
+      }else if (bmi<25&&bmi>19) {
+        document.getElementById('output').style.color='rgb(57, 190, 115)';
+      } else {
+        document.getElementById('output').style.color=' rgb(205, 102, 74)';
+      }
+    //  console.log(bmi);
+    })
+  }else{
+    alert("Enter valid Height");
+  }
+    height.val = 0;
+  });
+
+
+
+</script>
+
+</html>
