@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(59, 135, 135);
+        }
+        .container{
+            display: grid;
+            width: 30vw;
+            height: 25vh;
+             margin-top: 30px;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 6px 6px 20px black;
+            background-color: rgb(209, 223, 229);
+            border-radius: 10px;
+        }
+        #outputText{
+            height: 50px;
+            width: 200px;
+            border: 2px solid black;
+            margin: 10px 0px;
+            background: white;
+            border-radius: 10px;
+        }
+        #inputText{
+            width: 200px;
+            height: 30px;
+            border-radius:10px ;
+        }
+        #btn{
+            width: 70px;
+            height: 30px;
+            border-radius: 10px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            cursor: pointer;
+
+        }
+        #btn:hover{
+            background-color:teal;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="inputText" placeholder="Enter text">
+        <div id="outputText" ></div>
+        <!-- <div class="result"></div> -->
+        <button id="btn">Check</button>
+        <h4>Press <strong>P</strong> to ckeck</h4>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
